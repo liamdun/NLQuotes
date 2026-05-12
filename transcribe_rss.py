@@ -28,6 +28,15 @@ if sys.stdout.encoding != "utf-8":
 if sys.stderr.encoding != "utf-8":
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
+# Load .env before reading config values
+_env_file = Path(__file__).parent / ".env"
+if _env_file.exists():
+    for _line in _env_file.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _key, _, _val = _line.partition("=")
+            os.environ.setdefault(_key.strip(), _val.strip())
+
 # ── Config ───────────────────────────────────────────────────────────────────
 RSS_URL        = os.environ.get("BONUS_RSS_URL", "")
 CHANNEL_SOURCE = "benandemilshow_bonus"
