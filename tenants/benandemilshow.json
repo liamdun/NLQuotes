@@ -1,0 +1,54 @@
+{
+    "id": "benandemilshow",
+    "name": "benandemilshow",
+    "displayName": "BenAndEmilQuotes",
+    "hostnames": ["localhost"],
+    "port": 3003,
+    "branding": {
+      "logo": "/benandemilshow/logo.png",
+      "logoFallback": "/benandemilshow/logo.png",
+      "favicon": "/benandemilshow/logo.png",
+      "primaryColor": "#4CAF50",
+      "theme": "northernlion"
+    },
+    "metadata": {
+      "title": "BenAndEmilQuotes - Search The Ben and Emil Show Quotes",
+      "description": "Search through quotes from The Ben and Emil Show's videos.",
+      "keywords": "Ben and Emil, quotes, search, videos, youtube, podcast",
+      "ogImage": "/benandemilshow/logo.png",
+      "siteName": "BenAndEmilQuotes"
+    },
+    "texts": {
+      "searchPlaceholder": "Search quotes...",
+      "randomQuotesButton": "Random Quotes",
+      "footerText": "",
+      "disclaimer": "This site is not affiliated with The Ben and Emil Show. All quotes are from publicly available videos.",
+      "totalQuotesLabel": "Total quotes found:",
+      "noResultsMessage": "No quotes found. Try a different search term.",
+      "loadingMessage": "Loading...",
+      "errorMessage": "Unable to connect to database."
+    },
+    "channels": [
+      { "id": "all", "name": "All Sources" },
+      { "id": "benandemilshow", "name": "The Ben and Emil Show" }
+    ],
+    "database": {
+      "envVar": "DATABASE_URL_BENANDEMIL",
+      "description": "PostgreSQL database for Ben and Emil Show quotes"
+    },
+    "grafana": {
+      "dashboardUrl": "",
+      "mobileDashboardUrl": "",
+      "useHostname": false
+    },
+    "gameFilter": {
+      "enabled": false,
+      "label": "Series",
+      "tooltipText": "Filter by Series (type to search).",
+      "resetTooltipText": "Reset Series filter"
+    },
+    "umami": {
+      "scriptUrl": "",
+      "websiteId": ""
+    }
+  }
